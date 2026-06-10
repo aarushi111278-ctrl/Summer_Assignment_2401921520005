@@ -1,15 +1,13 @@
 class Solution {
-    public boolean checkInclusion(String s1, String s2) {
-        char[] arr1=s1.toCharArray();
-        Arrays.sort(arr1);
-        for(int i=0;i<=s2.length()-s1.length();i++){
-            String temp=s2.substring(i,i+s1.length());
-            char[] arr2=temp.toCharArray();
-            Arrays.sort(arr2);
-            if(Arrays.equals(arr1,arr2)){
-                return true;
+    public boolean isSubsequence(String s, String t) {
+        int i=0;
+        int j=0;
+        while(i<s.length() && j<t.length()){
+            if(s.charAt(i)==t.charAt(j)){
+                i++;
             }
+            j++;
         }
-        return false;
+        return i==s.length();
     }
 }
