@@ -1,3 +1,3 @@
 public abstract class Compartment{
-    public abstract String notic();
+    public abstract String notice();
 }
